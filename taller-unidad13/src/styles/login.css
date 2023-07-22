@@ -1,0 +1,206 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html{
+    font-size: 62.5%;
+  }
+   */
+/* .container-principal{
+    margin-top: 50px;
+} */
+
+/* CONTENEDOR GENERAL - TRANSPARENTE */
+.container{
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  position: fixed;
+  z-index: 1;
+}
+
+/* BACKGROUND Y CONTENEDER DEL FORMULARIO CON ESTILO TRANSPARENTE GRISASEO Y DESENFOCADO */
+.login-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(65,65,65,0.76) 50%, rgba(102,102,102,0.44) 100%);
+  backdrop-filter: blur(2px);
+
+  
+}
+
+/* FORMULARIO */
+.container-form{
+  width: 50%;
+  background: rgb(0,0,0,0.45);
+  margin:auto; 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  color:white; 
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+/* CONTENEDORES DE INPUTS */
+.datos{
+  margin-bottom: 20px;
+  width: 184px;
+  height: 30px;
+}
+/* INPUTS */
+.form-control{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* BOTON LOGIN - BASICO (YA NO UTILIZADO)*/
+.btn-login{
+  width: 183px;
+  background-color: darkgray;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+  margin: 0 0 10px 0;
+}
+
+/* MESAJES DE ERROR */
+.error{
+  color: white;
+}
+
+/*BOTON LOGIN*/
+.share-button{
+  width: 184px;
+  height: 38px;
+  background: #0000007a;
+  display: flex;
+  border-radius: 8px;
+  margin: 10px 10px 30px 10px;
+  align-items:center;
+  justify-content:space-around;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: .2s linear;
+ }
+
+ /* AVATARES DENTRO DEL BOTON LOGIN */
+ .share-button img{
+  width: 20px;
+  height: 20px;
+  transition: .2s linear;
+ }
+
+ /* FUNCION HOVER SOBRE LOS AVATARES */
+
+ .share-button img:hover{
+  transform: scale(1.5);
+ }
+
+ /* PALABRA "LOGIN" DENTRO DEL BOTON */
+ .share-button p{
+  position: relative; 
+  margin-top: 6px;
+  color: white;
+  font-size: 1.3em;
+  z-index: 2;
+ }
+
+ /* FUNCION HOVER SOBRE EL BOTON LOGIN */
+ 
+ .share-button:hover{
+  transform: scale(1.1);
+ }
+ 
+
+ /* BACKGROUND DINAMICO DEL BOTON LOGIN */
+ .share-button div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:black ;
+  padding: 0px;
+  text-align: center;
+  transition: .6s linear;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+ }
+
+
+ /* BLOQUE DE ANIMACION Y EFECTOS DEL BACKGROUND DINAMICO DEL BOTON LOGIN */
+ .share-button div::before{
+  content: "";
+  position: absolute;
+  left: 174px;
+  top: 20px;
+  width: 14px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(248,17,17,1) 0%, rgba(84,0,0,1) 35%, rgba(49,1,1,1) 66%, rgba(0,0,0,1) 100%);
+  animation: rotar 1s linear infinite;
+  display: block;
+ }
+
+
+ @keyframes rotar {
+  0% {
+      transform: translate(0, 0);
+  }
+  6.57% {
+      transform: translate(0, -16px);
+  }
+  9.79% {
+      transform: translate(-6px, -26px) rotate(-90deg);
+  }
+  46.81% {
+      transform: translate(-172px, -26px) rotate(-90deg);
+  }
+  50.03% {
+      transform: translate(-182px, -20px) rotate(-180deg);
+  }
+  56.60% {
+      transform: translate(-182px, 2px) rotate(-180deg);
+  }
+  59.82% {
+      transform: translate(-170px, 8px) rotate(-270deg);
+  }
+  96.84% {
+      transform: translate(-10px, 8px) rotate(-270deg);
+  }
+  100% {
+      transform: translate(0px, 0px) rotate(-360deg);
+  }
+}
+
+
+  .share-button div::after{
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      width: 174px;
+      height: 26px;
+      border-radius: 3px;
+      background-color: rgba(7, 1, 19, 0.986);
+      box-shadow: inset 16px 14px 20px #0000008c;
+      display: block;
+      z-index: 1;
+     }
+
+ .share-button:hover div{
+  transform:  translateX(-100%);
+  transition-delay: .1.5s;
+ }    
