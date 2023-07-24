@@ -19,6 +19,9 @@
   background-color: transparent;
   position: fixed;
   z-index: 1;
+  top: 0;
+  left: 50%; /* Centra horizontalmente en el 50% del ancho del navegador */
+  transform: translateX(-50%); 
 }
 
 /* BACKGROUND Y CONTENEDER DEL FORMULARIO CON ESTILO TRANSPARENTE GRISASEO Y DESENFOCADO */

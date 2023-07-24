@@ -2,7 +2,6 @@ import { useEffect,useState } from 'react';
 import { todosLosPersonajes } from '../Functions/funciones';
 import "../styles/listado.css";
 
-
 const Inicio = () => {
 
   const [personajes, setPersonaje] = useState(null);
@@ -29,16 +28,12 @@ const Inicio = () => {
 
   return (
     <>
-      
-
-      <div>
-      <h1>PERSONAJES DE RICK Y MORTY</h1>
-      <br />
-        <input value={buscar} onChange={buscador} type="text" placeholder='buscar personaje' className='form-control' />
+      <div className='container-search'>
+      <h1 className='main-title'>PERSONAJES DE RICK Y MORTY</h1>
+      <input value={buscar} onChange={buscador} type="text" placeholder='buscar personaje' className='form-control' />
       </div>
-    <br></br>
 
-
+       
       <div className='contenedor-listado'>
 
 
@@ -46,7 +41,7 @@ const Inicio = () => {
           resultado.map(personaje => (
             
 
-              <div className="card" style={{ width: '18rem' }}  key={personaje.id}>
+              <div className="card" key={personaje.id}>
                  <img src={personaje.image} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">{personaje.name}</h5>

@@ -17,9 +17,9 @@ export const Loged = (props) => {
 
   return (
     <div className='container-loged'>
-        <div className="bienvenido">
-          <p>Bienvenido {props.nombre}!</p>
-        </div>
+        
+          <p className="bienvenido">Bienvenido {props.nombre}!</p>
+        
         
           {/* BOTON SALIR */}
         <button onClick={handleLogout}>
